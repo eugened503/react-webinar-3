@@ -10,6 +10,12 @@ import "./styles.css";
 function App({ store }) {
   const list = store.getState().list;
 
+  const getDeclension = (num) => {
+    return num % 10 >= 2 && num % 10 <= 4 && (num % 100 < 10 || num % 100 >= 20)
+      ? "раза"
+      : "раз";
+  };
+
   return (
     <div className="App">
       <div className="App-head">
@@ -30,7 +36,11 @@ function App({ store }) {
                 <div className="Item-title">
                   {item.title}
                   {item.numberSelections > 0 && (
-                    <span> | Выделяли {item.numberSelections} раз(а)</span>
+                    <span>
+                      {" "}
+                      | Выделяли {item.numberSelections}{" "}
+                      {getDeclension(item.numberSelections)}{" "}
+                    </span>
                   )}
                 </div>
                 <div className="Item-actions">
