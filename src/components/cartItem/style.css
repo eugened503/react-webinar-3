@@ -1,23 +1,27 @@
-.Item {
+.Cart-item {
   display: flex;
   justify-content: flex-start;
   transition: background-color 1s;
 }
 
-.Item-code {
+.Cart-item-code {
   padding: 20px 10px 20px 20px;
 }
 
-.Item-title {
+.Cart-item-title {
   width: 100%;
   padding: 20px 10px;
 }
 
-.Item-price {
-  padding: 20px 24px;
+.Cart-item-price {
+  padding: 20px 0;
 }
 
-.Item-actions {
+.Cart-item-sum {
+  padding: 20px 24px 20px 62px;
+}
+
+.Cart-item-actions {
   display: flex;
   justify-content: flex-end;
   padding: 20px 20px 20px 10px;

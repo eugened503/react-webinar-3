@@ -50,3 +50,15 @@ export const generateCode1 = (function (start = 0) {
 export function generateCode2() {
   return generateCode2.value ? ++generateCode2.value : generateCode2.value = 1;
 }
+
+export function numberProducts(cart, key) {
+  return cart
+   .map((product) => product[key])
+   .reduce((item, acc) => acc += item, 0)
+}
+
+export function sum(cart, key1, key2) {
+  return cart
+    .map((product) => product[key1] * product[key2])
+    .reduce((item, acc) => acc += item, 0)
+}
